@@ -1,3 +1,2 @@
 # SheCodesPlus
-Weather app
-Weather in many towns
+Weather app - Weather in many towns
