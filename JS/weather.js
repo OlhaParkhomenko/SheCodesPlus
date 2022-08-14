@@ -111,8 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showWeather(response) {
     let temperature = `${Math.floor(response.data.main.temp)}`;
+    let humidity = response.data.main.humidity;
     let temperatureValue = document.querySelector("h2");
+    let humidityValue = document.querySelector("#currentHumidity");
     temperatureValue.innerHTML = `${temperature}℃`;
+    humidityValue.innerHTML = `${humidity}%`;
   }
 });
 
