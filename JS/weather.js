@@ -116,14 +116,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let humidity = response.data.main.humidity;
     let wind = response.data.wind.speed;
     let descriptionWeather = response.data.weather[0].description;
+    let icon = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
     let temperatureValue = document.querySelector("h2");
     let humidityValue = document.querySelector("#currentHumidity");
     let windValue = document.querySelector("#currentWind");
     let descriptionValue = document.querySelector("#desciptionWeather");
+    let imageIcon = document.querySelector("#icon");
     temperatureValue.innerHTML = `${temperature}℃ | ${temperatureF}°F`;
     humidityValue.innerHTML = `${humidity}%`;
     windValue.innerHTML = `${wind} meter/sec`;
     descriptionValue.innerHTML = descriptionWeather;
+    console.log(icon);
+    imageIcon.setAttribute("src", `${icon}`);
   }
 });
 
