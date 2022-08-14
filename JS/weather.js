@@ -110,12 +110,20 @@ document.addEventListener("DOMContentLoaded", () => {
   let city = document.querySelector("input#currentCity.form-control").innerHTML;
 
   function showWeather(response) {
-    let temperature = `${Math.floor(response.data.main.temp)}`;
+    console.log(response.data);
+    let temperature = Math.floor(response.data.main.temp);
+    let temperatureF = Math.floor(1.8 * temperature + 32);
     let humidity = response.data.main.humidity;
+    let wind = response.data.wind.speed;
+    let descriptionWeather = response.data.weather[0].description;
     let temperatureValue = document.querySelector("h2");
     let humidityValue = document.querySelector("#currentHumidity");
-    temperatureValue.innerHTML = `${temperature}℃`;
+    let windValue = document.querySelector("#currentWind");
+    let descriptionValue = document.querySelector("#desciptionWeather");
+    temperatureValue.innerHTML = `${temperature}℃ | ${temperatureF}°F`;
     humidityValue.innerHTML = `${humidity}%`;
+    windValue.innerHTML = `${wind} meter/sec`;
+    descriptionValue.innerHTML = descriptionWeather;
   }
 });
 

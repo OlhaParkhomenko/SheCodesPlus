@@ -13,6 +13,7 @@ ul {
   display: block;
   margin: 0 auto;
 }
-p#currentHumidity {
-  font-size: 1.5rem;
+p#currentHumidity,
+p#currentWind {
+  font-size: 0.9rem;
 }
