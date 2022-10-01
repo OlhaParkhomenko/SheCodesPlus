@@ -19,6 +19,7 @@
   <body>
    
     <h1>Weather temperature</h1>
+    <p class="current-date">&nbsp</p>
     <div class="container">
         <div class="row">
             <div class="col-4">
@@ -48,9 +49,9 @@
                     <label for="desciptionWeather">Weather description</label>
                     <p id="desciptionWeather">
                   </div>
-                  <div class="row">                                  
+                  <!-- <div class="row">                                  
                     <input type="button" class="btn btn-info p-2 mt-3" value="Add to favorites">
-                  </div> 
+                  </div>  -->
                 </form>
               </div>
             <div class="col-8">
@@ -65,90 +66,26 @@
                       <input type="submit" class="btn btn-success" value="Search" id="search-button">
                     </div>
                   </div>
-                  <div class="mt-3">
-                    
-                  <p>Favorities cities</p>
-                  <ul>
-                    <li id="first-town"><a href = "#">Agen</a></li>
-                    <li id="second-town"><a href = "#">Toulouse</a></li>
-                    <li id="third-town"><a href = "#">Bordeaux</a></li>
-                  </ul>
-                </div>
                 </div>   
               </form>
             <input type="button" id="current-button" class="btn btn-outline-success p-2 mt-3" value ="Current position"></input>  
             <p id="latitude">&nbsp</p>
             <p id="longitude">&nbsp</p>  
           </div>
-
-            <div class="row col-12">
-              <table class="mt-3">
-                <div class="row">
-                  <td>&nbsp;</td>
-                  <td><a href=#>Today</a></td>
-                  <td><a href=#>Tomorrow</a></td>
-                  <td><a href=#>For 3 days</a></td>
-                  <td><a href=#>For 4 days</a></td>
-                  <td><a href=#>For 5 days</a></td>
+          <div class="weather-forecast mt-3">
+            <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">Sam</div>
+                <img class ="weather-icon" src="http://openweathermap.org/img/wn/04d@2x.png" width="25px" alt="Weather icon">
+                <div class="weather-forecast-temperature">
+                  <span class="weather-forecast-temperature-max">20</span> 
+                  <span class="weather-forecast-temperature-min">14</span>
                 </div>
-              </table>
-            </div>      
-                
-              <table class="table table-striped mt-4" id="tableID">
-                <thead> 
-                  <tr>
-                    <th class="col-2" scope="col">Date</th>
-                    <th class="col-2" scope="col">Morning</th>
-                    <th class="col-2" scope="col">Day</th>
-                    <th class="col-2" scope="col">Evening</th>
-                    <th class="col-2" scope="col">Night</th>
-                    <th class="col-2" scope="col">Precipitation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                      <th class="col-2" scope="row">CurrentDate</th>
-                      <td class="col-2">&nbsp;</td>
-                      <td class="col-2">&nbsp;</td>
-                      <td class="col-2">&nbsp;</td>
-                      <td class="col-2">&nbsp;</td>
-                      <td class="col-2">&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <th class="col-2" scope="row">CurrentDate+1</th>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <th class="col-2" scope="row" >CurrentDate+2</th>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <th class="col-2" scope="row">CurrentDate+3</th>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <th class="col-2" scope="row" >CurrentDate+4</th>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                    <td class="col-2">&nbsp;</td>
-                  </tr>
-                </tbody>
-
-              </table>
+              </div>
+            </div>
+          </div>
+                         
+             
               <small><a href = "https://github.com/OlhaParkhomenko/SheCodesPlus">Created by Olga Parkhomenko</a></small>            
     </div>  
    <script src="JS/weather.js"></script> 

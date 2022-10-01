@@ -2,6 +2,9 @@ h1,
 h4 {
   text-align: center;
 }
+h1 {
+  padding-top: 20px;
+}
 img {
   width: 30%;
 }
@@ -16,4 +19,28 @@ ul {
 p#currentHumidity,
 p#currentWind {
   font-size: 0.9rem;
+}
+img.weather-icon {
+  width: 60px;
+}
+p.current-date {
+  text-align: center;
+  color: #2a3ab2;
+  font-size: 25px;
+  font-weight 400;
+}
+.weather-forecast {
+  font-size: 14px;
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 18px;
+  color: #202124;
+}
+.weather-forecast-temperature-max {
+  color: #202124;
+  font-size: 15px;
+}
+.weather-forecast-temperature-min {
+  color: #70757a;
 }

@@ -79,20 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
       : nowDate.getMinutes()
   }`;
   document.querySelector(
-    "#tableID tbody tr:first-child th"
+    "p.current-date"
   ).innerHTML = `${days[todayDay]}, ${todayDate} ${months[todayMonth]}`;
-  document.querySelector("#tableID tbody tr:nth-child(2) th").innerHTML = `${
-    days[todayDay + 1]
-  }, ${todayDate + 1} ${months[todayMonth]}`;
-  document.querySelector("#tableID tbody tr:nth-child(3) th").innerHTML = `${
-    days[todayDay + 2]
-  }, ${todayDate + 2} ${months[todayMonth]}`;
-  document.querySelector("#tableID tbody tr:nth-child(4) th").innerHTML = `${
-    days[todayDay + 3]
-  }, ${todayDate + 3} ${months[todayMonth]}`;
-  document.querySelector("#tableID tbody tr:nth-child(5) th").innerHTML = `${
-    days[todayDay + 4]
-  }, ${todayDate + 4} ${months[todayMonth]}`;
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -154,25 +142,3 @@ function showPosition(position) {
   //in my village it's doesn't work
   console.log(axios.get(weatherUrl).then(showWeather));
 }
-
-//for final project
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   function favorites(event) {
-//     event.preventDefault();
-//     let chosenCityArray = [];
-//     chosenCityArray.push(document.querySelector("#first-town a").innerHTML);
-//     chosenCityArray.push(document.querySelector("#second-town a").innerHTML);
-//     chosenCityArray.push(document.querySelector("#third-town a").innerHTML);
-//     alert(chosenCityArray);
-//     document.querySelector("#changeCity").value = chosenCityArray;
-//   }
-//   let firstCity = document.querySelector("#first-town");
-//   firstCity.addEventListener("click", favorites);
-
-//   let secondCity = document.querySelector("#second-town");
-//   secondCity.addEventListener("click", favorites);
-
-//   let thirdCity = document.querySelector("#third-town");
-//   secondCity.addEventListener("click", favorites);
-// });
