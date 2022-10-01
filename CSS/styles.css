@@ -27,7 +27,7 @@ p.current-date {
   text-align: center;
   color: #2a3ab2;
   font-size: 25px;
-  font-weight 400;
+  font-weight: 400 400;
 }
 .weather-forecast {
   font-size: 14px;
