@@ -19,7 +19,7 @@
   <body>
    
     <h1>Weather temperature</h1>
-    <p class="current-date">&nbsp</p>
+    <p class="current-date">&nbsp;</p>
     <div class="container">
         <div class="row">
             <div class="col-4">
@@ -35,7 +35,7 @@
                   <div>
                   <label for="currentWeather">Current weather</label>
                     <h2>&nbsp;</h2>
-                    <img id="icon" alt="icon"/> 
+                    <img src="&nbsp;" id="icon" alt="Weather-icon"/> 
                   </div> 
                   <div>
                     <label for="currentHumidity">Humidity</label>
@@ -49,11 +49,8 @@
                     <label for="desciptionWeather">Weather description</label>
                     <p id="desciptionWeather">
                   </div>
-                  <!-- <div class="row">                                  
-                    <input type="button" class="btn btn-info p-2 mt-3" value="Add to favorites">
-                  </div>  -->
-                </form>
-              </div>
+                 </form>
+            </div>
             <div class="col-8">
               <form id="form-city">
                 <div>
@@ -68,26 +65,20 @@
                   </div>
                 </div>   
               </form>
-            <input type="button" id="current-button" class="btn btn-outline-success p-2 mt-3" value ="Current position"></input>  
-            <p id="latitude">&nbsp</p>
-            <p id="longitude">&nbsp</p>  
-          </div>
-          <div class="weather-forecast mt-3">
-            <div class="row">
-              <div class="col-2">
-                <div class="weather-forecast-date">Sam</div>
-                <img class ="weather-icon" src="http://openweathermap.org/img/wn/04d@2x.png" width="25px" alt="Weather icon">
-                <div class="weather-forecast-temperature">
-                  <span class="weather-forecast-temperature-max">20</span> 
-                  <span class="weather-forecast-temperature-min">14</span>
-                </div>
-              </div>
+              <input type="button" id="current-button" class="btn btn-outline-success p-2 mt-3" value ="Current position"></input>  
+              <p id="latitude">&nbsp;</p>
+              <p id="longitude">&nbsp;</p>  
             </div>
-          </div>
+        </div>      
+
+        <div class="weather-forecast mt-3" id="weather6">
+            &nbsp;
+        </div>
                          
-             
-              <small><a href = "https://github.com/OlhaParkhomenko/SheCodesPlus">Created by Olga Parkhomenko</a></small>            
-    </div>  
+      
+        <small><a href = "https://github.com/OlhaParkhomenko/SheCodesPlus">Created by Olga Parkhomenko</a></small>            
+   
+  </div>  
    <script src="JS/weather.js"></script> 
    
   </body>

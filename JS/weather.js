@@ -68,8 +68,6 @@ let months = [
 ];
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-//for the final project, I will be working on the situation if the month changing
-
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("currentTime").value = `${
     nowDate.getHours() < 10 ? `0${nowDate.getHours()}` : nowDate.getHours()
@@ -118,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     imageIcon.setAttribute("src", `${icon}`);
   }
 });
+displayForecast();
 
 let buttonValue = document.querySelector("#current-button");
 buttonValue.addEventListener("click", current);
@@ -142,3 +141,30 @@ function showPosition(position) {
   //in my village it's doesn't work
   console.log(axios.get(weatherUrl).then(showWeather));
 }
+
+function displayForecast() {
+  let elementDisplay = document.querySelector(
+    "#weather6.weather-forecast.mt-3"
+  );
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+    <div class="weather-forecast-date">${day}</div>
+    <img class ="weather-icon" src="http://openweathermap.org/img/wn/04d@2x.png" width="25px" alt="Weather icon">
+      <div class="weather-forecast-temperature">
+      <span class="weather-forecast-temperature-max">20</span> 
+      <span class="weather-forecast-temperature-min">14</span>
+      </div>
+     </div> `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  elementDisplay.innerHTML = forecastHTML;
+}
+
+displayForecast();
