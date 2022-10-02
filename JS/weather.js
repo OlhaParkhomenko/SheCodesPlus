@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let city = document.querySelector("input#currentCity.form-control").innerHTML;
 
   function showWeather(response) {
-    console.log(response.data);
     let temperature = Math.floor(response.data.main.temp);
     let temperatureF = Math.floor(1.8 * temperature + 32);
     let humidity = response.data.main.humidity;
@@ -112,11 +111,10 @@ document.addEventListener("DOMContentLoaded", () => {
     humidityValue.innerHTML = `${humidity}%`;
     windValue.innerHTML = `${wind} meter/sec`;
     descriptionValue.innerHTML = descriptionWeather;
-    console.log(icon);
     imageIcon.setAttribute("src", `${icon}`);
+    getForecast(response.data.coord);
   }
 });
-displayForecast();
 
 let buttonValue = document.querySelector("#current-button");
 buttonValue.addEventListener("click", current);
@@ -129,7 +127,7 @@ function current(event) {
 function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let apiKey = "ca59042cd269412257c489aa9eea142b";
+  let apiKey = "990a7e052ff48457a84b971695128adf";
   document.querySelector("p#latitude").innerHTML = `Latitude - ${lat.toFixed(
     3
   )}`;
@@ -148,6 +146,7 @@ function displayForecast() {
   );
   let forecastHTML = `<div class="row">`;
   let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
+  let apiKey = "990a7e052ff48457a84b971695128adf";
 
   days.forEach(function (day) {
     forecastHTML =
@@ -167,4 +166,10 @@ function displayForecast() {
   elementDisplay.innerHTML = forecastHTML;
 }
 
-displayForecast();
+function getForecast(coordinates) {
+  let apiKey = "990a7e052ff48457a84b971695128adf";
+  console.log(coordinates);
+  let apiURL = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  console.log(apiURL);
+  axios.get(apiURL).then(displayForecast);
+}
