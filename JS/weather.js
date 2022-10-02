@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showWeather(response) {
     let temperature = Math.floor(response.data.main.temp);
-    let temperatureF = Math.floor(1.8 * temperature + 32);
+    //let temperatureF = Math.floor(1.8 * temperature + 32);
     let humidity = response.data.main.humidity;
     let wind = response.data.wind.speed;
     let descriptionWeather = response.data.weather[0].description;
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let windValue = document.querySelector("#currentWind");
     let descriptionValue = document.querySelector("#desciptionWeather");
     let imageIcon = document.querySelector("#icon");
-    temperatureValue.innerHTML = `${temperature}℃ | ${temperatureF}°F`;
+    temperatureValue.innerHTML = `${temperature}℃`; //| ${temperatureF}°F`;
     humidityValue.innerHTML = `${humidity}%`;
     windValue.innerHTML = `${wind} meter/sec`;
     descriptionValue.innerHTML = descriptionWeather;
